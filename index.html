@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subin & Sajitha | Wedding Invitation | വിവാഹ ക്ഷണക്കത്ത്</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Digital Wedding Invitation of Subin & Sajitha. Sunday, 22 November 2026. Sree Badra Auditorium, Mannuthi & Mangalya Auditorium, Kannambra. Cordially inviting your esteemed presence with family and friends.">
+  <meta name="keywords" content="Subin, Sajitha, Wedding Invitation, Kerala Wedding, Mannuthi, Kannambra, 22 November 2026">
+  <meta property="og:title" content="Subin & Sajitha - Digital Wedding Invitation">
+  <meta property="og:description" content="We are getting married! Join us in celebrating our wedding on Sunday, 22 November 2026.">
+  <meta property="og:image" content="assets/images/save-the-date-card.jpg">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@500;600;700&family=Noto+Serif+Malayalam:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Floating Falling Flower Petals Canvas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Celebration Confetti Canvas -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================================
+       TOP NAVIGATION BAR
+       ======================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Subin and Sajitha Home">
+        <span class="logo-monogram">S <span class="logo-heart">❤</span> S</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="#couple" class="nav-link" data-i18n="nav_couple">The Couple</a></li>
+        <li><a href="#calendar" class="nav-link" data-i18n="nav_calendar">Save The Date</a></li>
+        <li><a href="#events" class="nav-link" data-i18n="nav_events">Events</a></li>
+        <li><a href="#gallery" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+        <li><a href="#rsvp" class="nav-link" data-i18n="nav_rsvp">RSVP</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Background Music Player Widget -->
+        <div class="audio-widget" id="audio-widget" title="Toggle romantic background music" role="button" tabindex="0">
+          <div class="audio-disc">🎵</div>
+          <span class="audio-label" id="audio-state-text" data-i18n="music_btn">Play Music</span>
+          <div class="audio-wave">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <!-- Petals Toggle -->
+        <button class="control-btn active" id="petals-toggle-btn" title="Toggle floating floral petals">
+          🌸 <span data-i18n="petals_toggle">Petals</span>
+        </button>
+
+        <!-- Bilingual Language Switcher -->
+        <button class="control-btn lang-switch-btn" id="lang-toggle-btn" title="Switch language to Malayalam or English">
+          മലയാളം
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <header class="hero-section section" id="hero">
+    <div class="hero-background-decor">
+      <img src="assets/images/monogram-arch.jpg" alt="Floral Arch Watermark" class="hero-arch-watermark">
+    </div>
+
+    <div class="container hero-content">
+      <!-- Auspicious Invocations -->
+      <div class="auspicious-invocation">
+        <img src="assets/images/ganesha-symbol.jpg" alt="Lord Ganesha" class="ganesha-crest">
+        <span class="ganesha-shloka" data-i18n="invocation_text">|| Om Shree Ganeshaya Namaha ||</span>
+      </div>
+
+      <div class="hero-subtitle" data-i18n="hero_pretitle">We are getting married!</div>
+
+      <div class="couple-names-wrap">
+        <h1 class="couple-names">
+          <span>SUBIN</span>
+          <span class="couple-heart">❤</span>
+          <span>SAJITHA</span>
+        </h1>
+      </div>
+
+      <div class="ornament-divider">
+        <span class="ornament-icon">✦</span>
+      </div>
+
+      <div class="wedding-date-hero" data-i18n="hero_date">Sunday, 22 November 2026</div>
+      <div class="malayalam-era-date" data-i18n="hero_date_sub">1202 Vrischikam 6 (മലയാള മാസം)</div>
+
+      <!-- Couple Photo in Traditional Kerala Attire (Mundu & Set Saree under Floral Arch) -->
+      <div class="hero-couple-frame">
+        <img src="assets/images/couple-illustration.jpg" alt="Subin & Sajitha in Kerala Mundu & Kasavu Set Saree" class="hero-couple-img">
+        <div class="frame-badge">WELCOME TO OUR BEGINNING</div>
+      </div>
+
+      <!-- Real-time Countdown Timer -->
+      <div class="countdown-container">
+        <div class="countdown-title" data-i18n="countdown_title">COUNTING DOWN TO THE MUHURTHAM</div>
+        <div class="countdown-grid">
+          <div class="countdown-card">
+            <div class="countdown-number" id="cd-days">00</div>
+            <div class="countdown-label" data-i18n="cd_days">Days</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-number" id="cd-hours">00</div>
+            <div class="countdown-label" data-i18n="cd_hours">Hours</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-number" id="cd-mins">00</div>
+            <div class="countdown-label" data-i18n="cd_minutes">Mins</div>
+          </div>
+          <div class="countdown-card">
+            <div class="countdown-number" id="cd-secs">00</div>
+            <div class="countdown-label" data-i18n="cd_seconds">Secs</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Call-to-Actions -->
+      <div class="hero-cta-group">
+        <a href="#events" class="btn btn-primary" data-i18n="btn_events">View Events & Venues</a>
+        <a href="#calendar" class="btn btn-secondary" data-i18n="btn_add_cal">Save To Calendar</a>
+        <a href="#rsvp" class="btn btn-whatsapp" data-i18n="btn_rsvp_hero">Send RSVP</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SAVE THE DATE & CALENDAR SECTION
+       ======================================================================== -->
+  <section class="save-the-date-section section" id="calendar">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="nav_calendar">Save The Date</span>
+        <h2 class="section-title">Mark Your Calendar</h2>
+        <div class="ornament-divider"><span class="ornament-icon">✦</span></div>
+        <p class="section-subtitle">22 November 2026 • The beginning of our forever</p>
+      </div>
+
+      <div class="save-date-grid">
+        <!-- Interactive November 2026 Calendar Card -->
+        <div class="calendar-widget-card">
+          <div class="cal-header">
+            <div class="cal-month-title">NOVEMBER 2026</div>
+            <div class="cal-year-subtitle">Sunday, 22nd • 1202 Vrischikam 6</div>
+          </div>
+
+          <table class="cal-table" aria-label="November 2026 Wedding Calendar">
+            <thead>
+              <tr>
+                <th scope="col">S</th>
+                <th scope="col">M</th>
+                <th scope="col">T</th>
+                <th scope="col">W</th>
+                <th scope="col">T</th>
+                <th scope="col">F</th>
+                <th scope="col">S</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td class="cal-day-wedding" title="Subin & Sajitha Wedding Day!">22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>30</td>
+                <td class="cal-day-muted">1</td>
+                <td class="cal-day-muted">2</td>
+                <td class="cal-day-muted">3</td>
+                <td class="cal-day-muted">4</td>
+                <td class="cal-day-muted">5</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="cal-footer-actions">
+            <button class="btn btn-primary" id="btn-add-gcal" data-i18n="btn_add_cal">
+              📅 Add to Google Calendar
+            </button>
+            <button class="btn btn-secondary" id="btn-download-ics" data-i18n="btn_download_ics">
+              📥 Download iCal (.ics)
+            </button>
+          </div>
+        </div>
+
+        <!-- Authentic Card Graphic with Couple & Arch -->
+        <div class="save-date-media">
+          <img src="assets/images/save-the-date-card.jpg" alt="Subin & Sajitha Save the Date Card with Floral Arch and Kerala Couple" loading="lazy">
+          <div class="save-date-overlay-badge">OFFICIAL SAVE THE DATE</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       THE COUPLE SECTION (BRIDE & GROOM DETAILS)
+       ======================================================================== -->
+  <section class="the-couple-section section" id="couple">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="couple_tag">With Joyful Hearts</span>
+        <h2 class="section-title" data-i18n="couple_title">The Bride & The Groom</h2>
+        <div class="ornament-divider"><span class="ornament-icon">✦</span></div>
+        <p class="section-subtitle">Two souls, two families, united in love and traditional Kerala warmth</p>
+      </div>
+
+      <div class="couple-cards-wrap">
+        <!-- Groom Profile Card -->
+        <div class="profile-card">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar-ring"></div>
+            <img src="assets/images/groom-subin.jpg" alt="Groom Subin" class="profile-avatar">
+          </div>
+          <span class="profile-role-tag" data-i18n="groom_role">The Groom</span>
+          <h3 class="profile-name" data-i18n="groom_name">SUBIN</h3>
+          <p class="profile-relation" data-i18n="groom_relation">
+            Son of <span class="profile-parents">Mr. Sudhevan & Mrs. Ambika Sudhevan</span>
+          </p>
+          <div class="profile-address-box">
+            <span class="profile-address-label" data-i18n="groom_addr_lbl">Family Residence</span>
+            <div data-i18n="groom_address">Kunnampully House, Karappetta, Kannambra (P.O), Palakkad</div>
+          </div>
+        </div>
+
+        <!-- Center Emblem -->
+        <div class="couple-center-emblem">
+          <div class="rings-icon-wrap">💍</div>
+          <div class="center-script">&</div>
+        </div>
+
+        <!-- Bride Profile Card -->
+        <div class="profile-card">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar-ring"></div>
+            <img src="assets/images/bride-sajitha.jpg" alt="Bride Sajitha" class="profile-avatar">
+          </div>
+          <span class="profile-role-tag" data-i18n="bride_role">The Bride</span>
+          <h3 class="profile-name" data-i18n="bride_name">SAJITHA</h3>
+          <p class="profile-relation" data-i18n="bride_relation">
+            Daughter of <span class="profile-parents">Mr. Sathanandhan & Mrs. Shiji Sathanandhan</span>
+          </p>
+          <div class="profile-address-box">
+            <span class="profile-address-label" data-i18n="bride_addr_lbl">Family Residence</span>
+            <div data-i18n="bride_address">Thattil House, Mullakkara, Mannuthi (P.O), Thrissur</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EVENTS & ITINERARY SECTION (MOST IMPORTANT)
+       ======================================================================== -->
+  <section class="events-section section" id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="events_tag">Ceremony & Celebrations</span>
+        <h2 class="section-title" data-i18n="events_title">Events & Itinerary</h2>
+        <div class="ornament-divider"><span class="ornament-icon">✦</span></div>
+        <p class="section-subtitle" data-i18n="events_subtitle">We would be honored by your presence and blessings at our wedding ceremonies</p>
+      </div>
+
+      <div class="events-grid">
+        <!-- Event 1: The Wedding (വിവാഹം) -->
+        <div class="event-card wedding-card">
+          <div class="event-card-top-bar"></div>
+          <div>
+            <span class="event-badge" data-i18n="event1_badge">Auspicious Muhurtham</span>
+            <h3 class="event-title" data-i18n="event1_title">The Wedding Ceremony</h3>
+            <div class="event-title-ml" data-i18n="event1_title_sub">വിവാഹം</div>
+
+            <div class="event-details-list">
+              <div class="event-detail-item">
+                <div class="event-icon-bubble">📅</div>
+                <div>
+                  <div class="event-info-label">Date</div>
+                  <div class="event-info-value" data-i18n="event1_date">22 Nov 2026, Sunday</div>
+                  <small style="color: var(--text-muted);">(1202 Vrischikam 6)</small>
+                </div>
+              </div>
+
+              <div class="event-detail-item">
+                <div class="event-icon-bubble">⏰</div>
+                <div>
+                  <div class="event-info-label">Muhurtham (Time)</div>
+                  <div class="event-info-value" data-i18n="event1_time">Between 10.00 AM to 11.00 AM</div>
+                  <div class="event-special-note" data-i18n="event1_party_note">
+                    ℹ️ Note: Marriage party will start at 9.00 AM
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-detail-item">
+                <div class="event-icon-bubble">📍</div>
+                <div>
+                  <div class="event-info-label">Venue</div>
+                  <div class="event-info-value" data-i18n="event1_venue">Sree Badra Auditorium</div>
+                  <small data-i18n="event1_venue_loc">Mannuthi, Thrissur, Kerala</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-actions">
+            <a href="https://maps.google.com/?q=Sree+Badra+Auditorium,+Mannuthi,+Thrissur" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="btn_directions">
+              🗺️ Get Directions (Google Maps)
+            </a>
+          </div>
+        </div>
+
+        <!-- Event 2: Wedding Reception (സൽക്കാരം) -->
+        <div class="event-card reception-card">
+          <div class="event-card-top-bar"></div>
+          <div>
+            <span class="event-badge reception" data-i18n="event2_badge">Grand Evening Celebration</span>
+            <h3 class="event-title" data-i18n="event2_title">Wedding Reception</h3>
+            <div class="event-title-ml" data-i18n="event2_title_sub">സൽക്കാരം</div>
+
+            <div class="event-details-list">
+              <div class="event-detail-item">
+                <div class="event-icon-bubble">📅</div>
+                <div>
+                  <div class="event-info-label">Date</div>
+                  <div class="event-info-value" data-i18n="event2_date">22 Nov 2026, Sunday</div>
+                  <small style="color: var(--text-muted);">(1202 Vrischikam 6)</small>
+                </div>
+              </div>
+
+              <div class="event-detail-item">
+                <div class="event-icon-bubble">⏰</div>
+                <div>
+                  <div class="event-info-label">Time</div>
+                  <div class="event-info-value" data-i18n="event2_time">4.00 PM to 7.00 PM</div>
+                  <small>Join us for music, dinner, and greetings</small>
+                </div>
+              </div>
+
+              <div class="event-detail-item">
+                <div class="event-icon-bubble">📍</div>
+                <div>
+                  <div class="event-info-label">Venue</div>
+                  <div class="event-info-value" data-i18n="event2_venue">Mangalya Auditorium</div>
+                  <small data-i18n="event2_venue_loc">Kannambra, Palakkad, Kerala</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-actions">
+            <a href="https://maps.google.com/?q=Mangalya+Auditorium,+Kannambra,+Palakkad" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="btn_directions">
+              🗺️ Get Directions (Google Maps)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Original Printed Invitation Card Modal Trigger -->
+      <div class="view-printed-card-banner">
+        <button class="card-preview-btn" id="btn-open-card-modal">
+          📜 <span data-i18n="btn_view_original_cards">View Original Printed Invitation Card (English & മലയാളം)</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PHOTO GALLERY SECTION (MASONRY & LIGHTBOX)
+       ======================================================================== -->
+  <section class="gallery-section section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="gallery_tag">Cherished Moments</span>
+        <h2 class="section-title" data-i18n="gallery_title">Photo Gallery</h2>
+        <div class="ornament-divider"><span class="ornament-icon">✦</span></div>
+        <p class="section-subtitle" data-i18n="gallery_subtitle">Glances of love, traditions, and timeless celebrations</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All Photos</button>
+        <button class="filter-btn" data-filter="couple" data-i18n="filter_couple">Couple & Arch</button>
+        <button class="filter-btn" data-filter="prewedding" data-i18n="filter_prewedding">Pre-Wedding</button>
+        <button class="filter-btn" data-filter="tradition" data-i18n="filter_tradition">Kerala Traditions</button>
+      </div>
+
+      <!-- Masonry Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       RSVP & CONTACT SECTION
+       ======================================================================== -->
+  <section class="rsvp-section section" id="rsvp">
+    <div class="container container-narrow">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="rsvp_tag">Be Our Guest</span>
+        <h2 class="section-title" data-i18n="rsvp_title">RSVP & Blessings</h2>
+        <div class="ornament-divider"><span class="ornament-icon">✦</span></div>
+      </div>
+
+      <!-- Heartfelt Invitation Quote Banner -->
+      <div class="invitation-quote-banner">
+        <span class="quote-icon">“</span>
+        <p class="invitation-quote-text" data-i18n="invitation_quote">
+          “Cordially invite your esteemed presence with family and friends on the auspicious occasion.”
+        </p>
+
+        <div class="contact-highlight-card">
+          <span style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="contact_note">For any assistance or travel inquiries:</span>
+          <a href="tel:9020875035" class="contact-pill">
+            📞 9020875035
+          </a>
+          <a href="https://wa.me/919020875035" target="_blank" rel="noopener noreferrer" class="contact-pill" style="background: rgba(37, 211, 102, 0.12); color: #1e7e34;">
+            💬 WhatsApp: 9020875035
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive RSVP Form Box -->
+      <div class="rsvp-form-card">
+        <form id="rsvp-form">
+          <div class="form-group">
+            <label for="rsvp-name" class="form-label">
+              <span data-i18n="form_lbl_name">Your Full Name</span> <span class="req">*</span>
+            </label>
+            <input type="text" id="rsvp-name" class="form-control" placeholder="e.g. Rahul Nair" required>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvp-phone" class="form-label">
+              <span data-i18n="form_lbl_phone">Phone / WhatsApp Number</span>
+            </label>
+            <input type="tel" id="rsvp-phone" class="form-control" placeholder="e.g. +91 9876543210">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_lbl_attending">Will You Be Attending?</label>
+            <div class="radio-pills-wrap">
+              <label class="radio-pill-label">
+                <input type="radio" name="attending" value="Yes" checked>
+                <div class="radio-pill-box">
+                  <span>✨</span> <span data-i18n="form_opt_yes">Yes, with pleasure!</span>
+                </div>
+              </label>
+              <label class="radio-pill-label">
+                <input type="radio" name="attending" value="No">
+                <div class="radio-pill-box">
+                  <span>💌</span> <span data-i18n="form_opt_no">Regretfully decline</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="form_lbl_events">Which Events Will You Attend?</label>
+            <div class="radio-pills-wrap">
+              <label class="radio-pill-label">
+                <input type="radio" name="events" value="Both" checked>
+                <div class="radio-pill-box" data-i18n="form_opt_both">Both Wedding & Reception</div>
+              </label>
+              <label class="radio-pill-label">
+                <input type="radio" name="events" value="Wedding">
+                <div class="radio-pill-box" data-i18n="form_opt_wedding">Wedding Only</div>
+              </label>
+              <label class="radio-pill-label">
+                <input type="radio" name="events" value="Reception">
+                <div class="radio-pill-box" data-i18n="form_opt_reception">Reception Only</div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvp-guests" class="form-label" data-i18n="form_lbl_guests">Number of Guests</label>
+            <select id="rsvp-guests" class="form-control">
+              <option value="1">1 Person</option>
+              <option value="2" selected>2 Persons</option>
+              <option value="3">3 Persons</option>
+              <option value="4">4 Persons</option>
+              <option value="5+">5+ (Family)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="rsvp-wishes" class="form-label" data-i18n="form_lbl_wishes">Your Warm Wishes for the Couple</label>
+            <textarea id="rsvp-wishes" class="form-control" rows="3" placeholder="Write your heartfelt blessings..."></textarea>
+          </div>
+
+          <div class="form-buttons-row">
+            <button type="submit" class="btn btn-primary" id="btn-submit-rsvp" data-i18n="btn_submit_rsvp">
+              💌 Confirm RSVP Online
+            </button>
+            <button type="button" class="btn btn-whatsapp" id="btn-whatsapp-rsvp" data-i18n="btn_whatsapp_rsvp">
+              💬 RSVP via WhatsApp
+            </button>
+          </div>
+
+          <!-- Success Message -->
+          <div class="rsvp-success-msg" id="rsvp-success-msg">
+            <h4 style="margin-bottom: 0.5rem; font-family: var(--font-serif); font-size: 1.3rem;">🎉 RSVP Received!</h4>
+            <p data-i18n="rsvp_success_text">Thank you so much! Your RSVP and heartfelt wishes have been recorded. We look forward to celebrating with you!</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BLESSINGS & WISHES WALL (LIVE GUESTBOOK)
+       ======================================================================== -->
+  <section class="wishes-section section" id="wishes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="wishes_tag">Love & Good Wishes</span>
+        <h2 class="section-title" data-i18n="wishes_title">Blessings Wall</h2>
+        <div class="ornament-divider"><span class="ornament-icon">✦</span></div>
+        <p class="section-subtitle" data-i18n="wishes_subtitle">Heartfelt notes and love from our dearest family and friends</p>
+      </div>
+
+      <div class="wishes-wall-grid" id="wishes-wall-grid">
+        <!-- Rendered by js/app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-couple-names">Subin & Sajitha</div>
+      <div class="footer-compliments" data-i18n="footer_compliments">With best Compliments from: Friends & Relatives</div>
+      <div class="footer-compliments-ml" data-i18n="footer_compliments_sub">ഹൃദയം നിറഞ്ഞ ഉപചാരങ്ങളോടെ: ബന്ധുമിത്രാദികൾ</div>
+
+      <div class="footer-actions">
+        <button class="btn btn-secondary" id="btn-share-wa">
+          📤 <span data-i18n="footer_share">Share Invitation on WhatsApp</span>
+        </button>
+        <button class="btn btn-secondary" id="btn-copy-link">
+          🔗 <span data-i18n="footer_copy_link">Copy Link</span>
+        </button>
+      </div>
+
+      <div class="footer-copyright">
+        <p>Wedding of Subin & Sajitha • 22 November 2026 • Thrissur & Palakkad, Kerala</p>
+        <p style="margin-top: 0.35rem; font-size: 0.8rem; opacity: 0.7;">Crafted with love for an unforgettable wedding celebration</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MOBILE FLOATING ACTION BAR
+       ======================================================================== -->
+  <div class="floating-mobile-bar" id="mobile-action-bar">
+    <a href="#events" class="floating-mobile-btn">
+      <span>📍</span> <span>Venues</span>
+    </a>
+    <span style="color: rgba(255,255,255,0.3);">|</span>
+    <a href="#rsvp" class="floating-mobile-btn" style="color: #ffd700;">
+      <span>💌</span> <span>RSVP</span>
+    </a>
+    <span style="color: rgba(255,255,255,0.3);">|</span>
+    <a href="tel:9020875035" class="floating-mobile-btn">
+      <span>📞</span> <span>Call</span>
+    </a>
+  </div>
+
+  <!-- ========================================================================
+       GALLERY LIGHTBOX MODAL
+       ======================================================================== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-hidden="true" aria-label="Photo Lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next photo">›</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       PRINTED INVITATION CARD MODAL
+       ======================================================================== -->
+  <div class="card-modal" id="card-modal" role="dialog" aria-hidden="true" aria-label="Printed Invitation Cards">
+    <div class="card-modal-box">
+      <button class="lightbox-close" id="card-modal-close" style="top: 1rem; right: 1rem; color: #241916; background: #f0eae1;" aria-label="Close modal">✕</button>
+      <h3 style="font-family: var(--font-serif); text-align: center; margin-bottom: 1.25rem; font-size: 1.6rem; color: var(--text-main);">
+        Printed Wedding Invitation Card
+      </h3>
+      
+      <div class="card-modal-tabs">
+        <button class="card-modal-tab active" id="tab-card-en">English Card</button>
+        <button class="card-modal-tab" id="tab-card-ml">മലയാളം കാർഡ്</button>
+      </div>
+
+      <img src="assets/images/card-english.jpg" alt="Wedding Invitation Card" class="card-modal-img" id="card-modal-img">
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="js/app.js"></script>
+</body>
+</html>
